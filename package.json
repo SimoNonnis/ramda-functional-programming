@@ -1,0 +1,23 @@
+{
+  "name": "ramda-functional-programming",
+  "version": "1.0.0",
+  "description": "Experiments with Ramda.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimoNonnis/ramda-functional-programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimoNonnis/ramda-functional-programming/issues"
+  },
+  "homepage": "https://github.com/SimoNonnis/ramda-functional-programming#readme",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}

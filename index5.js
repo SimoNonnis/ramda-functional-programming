@@ -6,11 +6,9 @@ const getHobbies = () =>
     setTimeout(() => res(['Reading', 'Rolling', 'Climbing']), 1000);
   });
 
-Promise.all([getName(), getHobbies()]).then(res => {
-  const [name, hobbies] = res;
-  const result = {
+Promise.all([getName(), getHobbies()])
+  .then(([name, hobbies]) => ({
     name,
     hobbies
-  };
-  console.log({ result });
-});
+  }))
+  .then(res => console.log(res));

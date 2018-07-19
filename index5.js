@@ -1,4 +1,5 @@
-// const R = require('ramda');
+const R = require('ramda');
+const { zip, fromPairs, compose } = R;
 
 const getName = () => Promise.resolve('Simon');
 const getHobbies = () =>
@@ -7,8 +8,10 @@ const getHobbies = () =>
   });
 
 Promise.all([getName(), getHobbies()])
-  .then(([name, hobbies]) => ({
-    name,
-    hobbies
-  }))
+  .then(
+    compose(
+      fromPairs,
+      zip(['name', 'hobbies'])
+    )
+  )
   .then(res => console.log(res));
